@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+:root{
+  --nav_size: 4.5rem
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+
+html {
+  font-family: 'Open Sans', 'Lato', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+#main-navigation {
+  width: 100%;
+  height: var(--nav_size);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+
+#main-navigation a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+#main-navigation a:hover,
+#main-navigation a:active {
+  color: #00a2ff;
+}
+
+/* #main-navigation h1 a:hover,
+#main-navigation h1 a:active {
+
+} */
+
+#image {
+  vertical-align: middle;
+}
+
+#image:hover,
+#image:active {
+  transform: scale(1.005);
+}
+
+#contents {
+  margin-top: var(--nav_size); /* Add a top margin to avoid content overlay */
+}

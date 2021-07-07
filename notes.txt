@@ -1,7 +1,3 @@
-# qdm-studios-site
-
-## **Instalação e comandos terminal**
-```bash
 py -m install Django
 django-admin startproject mypage
 py manage.py runserver  #test server
@@ -9,34 +5,18 @@ py manage.py startapp my_app
 py manage.py makemigrations #rodar toda vez que modifcar models.py
 py manage.py migrate #rodar toda vez que modifcar models.py
 py manage.py shell ## interagir com o banco
-```
 
-## **settings.py**
+#add na settings.py da página:
+para reconhecer apps: adicionar app na lista INSTALLED_APPS (ex. 'my_app')
+para reconhecer templates no diretório base (usar extends nos html): add BASE_DIR/"templates" na lista 'DIRS' dentro de TEMPLATES
+para reconhecer arquivos static no diretório base: add STATICFILES_DIRS = [BASE_DIR/"static"]
 
-> para reconhecer apps: adicionar app na lista INSTALLED_APPS (ex. 'my_app')
-
-> para reconhecer templates no diretório base (usar extends nos html): add BASE_DIR/"templates" na lista 'DIRS' dentro de TEMPLATES
-
-> para reconhecer arquivos static no diretório base: add STATICFILES_DIRS = [BASE_DIR/"static"]
-
-## **urls.py**
-```py
+##### urls.py
 from django.urls import path, include
 from . import views
 path('posts/<slug:slug>', views.post_detail)
-```
 
-## Enviar página html salva com argumentos (variáveis do código)
-```python
-from django.shortcuts import render
-return render(request, "pasta/arquivo.html", {
-    "arg1": var1,
-    "arg2": var2
-})
-```
-
-## mostrar pagina de erro (carrega template 404.html)
-```python
+##### mostrar pagina de erro (carrega template 404.html)
 from django.http import Http404
 try:
     something
@@ -45,20 +25,12 @@ except:
 #ou
 from django.shortcuts import get_object_or_404
 book= get_object_or404(Book, pk=id)
-```
 
 
+##### Filters no html:
 
-## **Html e filtros**
-
-```html
-- add css style
-<link rel="stylesheet" href="{% static 'app.css' %}">
-- redirecionar para url
+# redirecionar para url
 <a href="{% url "url_name" %}">All Challenges</a>
-```
-
-
 
 # carregar html passando variável
 {% include "./includes/header.html" with var1="var_1" %}
@@ -80,6 +52,13 @@ book= get_object_or404(Book, pk=id)
 
 ##### views.py
 
+# Enviar página html salva com argumentos (variáveis do código)
+
+from django.shortcuts import render
+return render(request, "pasta/arquivo.html", {
+    "arg1": var1,
+    "arg2": var2
+})
 
 
 
@@ -107,11 +86,6 @@ py manage.py createsuperuser
 ## admin.py
 from .models import Book
 admin.site.register(Book)
-
-# pra testar no celular, acrescentar no setup.py:
-ALLOWED_HOSTS = ['*']
-py manage.py runserver 0.0.0.0:8000
-entrar no ip do pc pelo cel + :8000
     
 
 
