@@ -58,7 +58,7 @@ h3 {
 }
 
 #title {
-  padding-top: 0.6%;
+  padding-top: 0.6rem;
   display: flex;
   /* align-items: center; */
   justify-content: center;
@@ -67,7 +67,7 @@ h3 {
 }
 
 #nav {
-  padding-top: 0.6%;
+  padding-top: 0.6rem;
   display: flex;
   /* max-width: var(--body_width); */
   justify-content: center;
@@ -78,12 +78,14 @@ h3 {
   /* display: inline-block; */
   /* position: relative; */
   font-weight: normal;
-  padding-inline-end: 2%;
+  padding-inline: 1rem;
+  color: #00a2ff;
+  font-weight: bold;
 }
 
 #nav a:hover,
 #nav a:active {
-  color: #00a2ff;
+  color: #f3f3f3;
   font-weight: bold;
 }
 
