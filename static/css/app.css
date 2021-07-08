@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
 :root{
-  --nav_size: 3.8rem
+  --nav_size: 5.8rem;
+  --body_width: 1200px;
 }
 
 * {
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-  max-width: 1200px;
+  max-width: var(--body_width);
   padding: 0% 3%;
   margin-left: auto;
   margin-right: auto;
@@ -38,10 +39,8 @@ h3 {
 #main-navigation {
   width: 100%;
   height: var(--nav_size);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0% 3%;
+  /* padding: 0% 3%; */
+  padding: 0%;
   position: fixed;
   top: 0;
   left: 0;
@@ -49,25 +48,41 @@ h3 {
   font-family:'LuzSans-Book';
 }
 
+#main-navigation *{
+  display: inline;
+}
+
 #main-navigation a{
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
 
-#main-navigation nav{
-  word-spacing: 1rem;
-}
-
-#title{
+#title {
+  padding-top: 0.6%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
   font-weight: normal;
+  word-spacing: 0.28rem;
 }
 
-#menu{
+#nav {
+  padding-top: 0.6%;
+  display: flex;
+  /* max-width: var(--body_width); */
+  justify-content: center;
+  word-spacing: 0.28rem;
+}
+
+#nav a{
+  /* display: inline-block; */
+  /* position: relative; */
   font-weight: normal;
+  padding-inline-end: 2%;
 }
 
-#menu:hover,
-#menu:active {
+#nav a:hover,
+#nav a:active {
   color: #00a2ff;
   font-weight: bold;
 }
