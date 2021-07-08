@@ -13,3 +13,6 @@ def page_selected_post(request):
 
 def page_contato(request):
     pass
+
+def page_sobre(request):
+    pass

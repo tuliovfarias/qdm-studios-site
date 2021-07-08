@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+:root{
+  --nav_size: 3.8rem
+}
+
+* {
+  box-sizing: border-box;
+
+}
+
+@font-face {
+  font-family: 'LuzSans-Book';
+  src: local('LuzSans-Book'),
+       url('../fonts/LUZRO.TTF') format("truetype");
+}
+
+html {
+  
+  /* font-family: 'Open Sans', 'Lato', sans-serif; */
+  font-family: 'LuzSans-Book';
+}
+
+body {
+  max-width: 1200px;
+  padding: 0% 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* h1,
+h2,
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+} */
+
+#main-navigation {
+  width: 100%;
+  height: var(--nav_size);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 3%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  font-family:'LuzSans-Book';
+}
+
+#main-navigation a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+#main-navigation nav{
+  word-spacing: 1rem;
+}
+
+#title{
+  font-weight: normal;
+}
+
+#menu{
+  font-weight: normal;
+}
+
+#menu:hover,
+#menu:active {
+  color: #00a2ff;
+  font-weight: bold;
+}
+
+#contents {
+  margin-top: var(--nav_size); /* Add a top margin to avoid content overlay */
+}
+
+/* #title:hover,
+#title:active {
+  font-weight: normal;
+  transform: scale(1.005);
+} */
+
+/* #main-navigation h1 a:hover,
+#main-navigation h1 a:active {
+
+} */
+
+/* #image {
+  vertical-align: middle;
+}
+
+#image:hover,
+#image:active {
+  transform: scale(1.005);
+} */
+
