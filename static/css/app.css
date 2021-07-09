@@ -36,6 +36,10 @@ h3 {
   font-weight: bold;
 } */
 
+#nav-area{
+  display: flex;
+}
+
 #header-area {
   width: 100%;
   height: var(--nav_size);
@@ -83,6 +87,8 @@ header a{
 }
 
 #nav-area a{
+  padding-left: 1.5rem;
+  /* background-color: rgb(158, 0, 0); */
   font-weight: normal;  
   color: #3bb7ff;
   font-weight: bold;
