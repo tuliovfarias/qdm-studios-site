@@ -36,23 +36,20 @@ h3 {
   font-weight: bold;
 } */
 
-#header-area {
-  
+#all-header {
   width: 100%;
   height: var(--nav_size);
-  position: fixed;
-  top: 0;
-  left: 0;
+  
   background-color: black;
 }
 
-header {
-  justify-items: center;
+#main-navigation {
   width: 50%;
   display: grid;
+  
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
-  "socials-links-area title-area nav-area";
+  "social-links title nav";
   grid-gap: 0.2rem;
   font-family:'LuzSans-Book';
 }
@@ -65,9 +62,13 @@ header {
 
 } */
 
-#title-area {
-  grid-area: title-area;
-  
+#main-navigation a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+#title {
+  grid-area: title;
   /* padding-top: 0.3rem;
   display: flex;
   padding-right: 5rem;
@@ -75,10 +76,11 @@ header {
   justify-content: left;
   font-weight: normal;
   word-spacing: 0.28rem; */
+  
 }
 
-#nav-area {
-  grid-area: nav-area;
+nav {
+  grid-area: nav;
   /* padding-top: 0.6rem;
   display: flex;
   max-width: var(--body_width); 
@@ -86,13 +88,8 @@ header {
   word-spacing: 0.28rem; */
 }
 
-#socials-links-area {
-  grid-area: socials-links-area;
-}
-
-header a{
-  text-decoration: none;
-  color: rgb(255, 255, 255);
+#social-links {
+  grid-area: "social-links";
 }
 
 #nav a{

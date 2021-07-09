@@ -13,23 +13,23 @@
 </head>
 
 <body>
-    <div id="header-area">
-        <header>
-            <div id="title-area">
-                <h1><a id="title" href="">QDM l STUDIOS</a></h1>
-            </div>
-            {% comment %} <h1><a href=""><img id="image" src="{% static 'images/qdm_logo_hor.png' %}"
-                        alt="QDM STUDIOS"></a></h1> {% endcomment %}
-            <nav id="nav-area" role="navigation">
-                <a href="\sobre">SOBRE</a>
-                <a href="\contato">CONTATO</a>
-            </nav>
-            <div id="socials-links-area">
-                <a class="social-links" href="">FB</a>
-                <a class="social-links" href="">INS</a>
-            </div>
-        </header>
+    <div id="all-header">
+
+    <header id="main-navigation">
+    {% comment %} <div id="bar"> {% endcomment %}
+        <h1><a id="title" href="">QDM l STUDIOS</a></h1>
+        {% comment %} <h1><a href=""><img id="image" src="{% static 'images/qdm_logo_hor.png' %}" alt="QDM STUDIOS"></a></h1> {% endcomment %}
+        <nav role="navigation">
+            <a href="\sobre">SOBRE</a>
+            <a href="\contato">CONTATO</a>           
+        </nav>
+        <div id="social-links">
+            <a href="">FB</a>
+            <a href="">INS</a>
+        </div>
     </div>
+    {% comment %} </div> {% endcomment %}
+    </header>
     <div id="contents">
         {% block content %}{% endblock content %}
     </div>
