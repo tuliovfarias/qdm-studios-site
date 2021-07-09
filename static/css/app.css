@@ -47,9 +47,6 @@ h3 {
 
 header {
   height: var(--nav_size);
-  top: 0;
-  left: 0;
-  margin: auto;
   display: grid;
   grid-template-columns: 0.8fr 1fr 0.8fr;
   /* grid-template-rows: minmax(0, 1fr); */
@@ -73,7 +70,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  white-space: nowrap
+  white-space: nowrap /*Não quebrar linha*/
   /* padding-top: 0.3rem;
   display: flex;
   padding-right: 5rem;
