@@ -98,8 +98,11 @@ header a{
 
 #nav-area a:hover,
 #nav-area a:active {
-  color: #ffffff;
-  font-weight: bolder;
+  /*color: #ffffff;*/
+  /* font-weight: bold; */
+  text-underline-position: under;
+  text-underline-offset: 0.2rem;
+  text-decoration: underline;
 }
 
 #contents {
@@ -108,8 +111,8 @@ header a{
 
 /* #title:hover,
 #title:active {
-  font-weight: normal;
-  transform: scale(1.005);
+  font-weight: bold;
+  transform: scale(1.05);
 } */
 
 /* #main-navigation h1 a:hover,
