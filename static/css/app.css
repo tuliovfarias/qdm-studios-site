@@ -43,32 +43,36 @@ header {
   /* padding-inline: 3%; */
   justify-content: space-between; /* Alinhamento horizontal*/
   align-items: center; /* Alinhamento vertical */
-  font-family:'LuzSans-Book';
 }
 
-header a{
+a{
   /*padding-inline: 3%;*/ /*Espaço vertical entre os elementos*/
+  font-family:'LuzSans-Book';
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
 
-#nav-area{
-  display: flex;
-}
 
-#title {
+
+#title a{
   /* background-color: rgb(182, 0, 0); */
   font-size: 2.2rem;
   word-spacing: 0.28rem; /* Distância do espaço entre palavras */
   white-space: nowrap; /* Sem quebra de linha */
 }
 
+#nav-area{
+  display: flex;
+}
+
 #nav-area a{
-  padding-left: 1.5rem;
-  /* background-color: rgb(158, 0, 0); */
+  margin-left:0.5rem;
+  padding: 1rem;
   font-weight: normal;  
   color: #3bb7ff;
   font-weight: bold;
+  /* background-color: aquamarine; */
+  
   /* word-spacing: 0.28rem; */
 }
 
