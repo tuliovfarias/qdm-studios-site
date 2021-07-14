@@ -1,13 +1,11 @@
 #blog_content {
   display: grid;
   height: 100vh;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 1rem;
-
 }
 
 #blog_content div{
   background-color: blueviolet;
-
 }
