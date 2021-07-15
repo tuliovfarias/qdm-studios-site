@@ -52,13 +52,11 @@ book= get_object_or404(Book, pk=id)
 ## **Html e filtros**
 
 ```html
-- add css style
+# add css style
 <link rel="stylesheet" href="{% static 'app.css' %}">
-- redirecionar para url
+
+# redirecionar para url
 <a href="{% url "url_name" %}">All Challenges</a>
-```
-
-
 
 # carregar html passando variável
 {% include "./includes/header.html" with var1="var_1" %}
@@ -67,43 +65,53 @@ book= get_object_or404(Book, pk=id)
 {% load static %} 
 <link rel="stylesheet" href="{% static "templates/app/"|add:css_file_var_or_file %}">
 
-#inserir blocos em um arquivo template
+# inserir blocos em um arquivo template
 <title>{% block page_title %}Título Padrão{% endblock %}</title>
 {% block css_files %}{% endblock css_files %}
 <body>{%block content%}{%endblock%}</body>
 
-#Formatar data
+# Formatar data
 <time>{{post.date|date:"d M Y"}}</time>
 
-#Preservar quebra de linha
+# Preservar quebra de linha
 {{post.content|linebreaks}}
 
-##### views.py
+```
+
+## views.py
 
 
 
 
-##### models.py 
+## models.py 
+```python
 class Book(models.Model): #pesquisar django model field reference (FieldTypes)
+```
 
-## MySQL django queries
-## pesquisar django making queries 
-## Book.objects.filter(rating__gt=3) #pesquisar Field lookups
+## MySQL django queries (pesquisar django making queries) 
+```python
 from .models import Book #Queries na views
+Book.objects.filter(rating__gt=3) #pesquisar Field lookups
 bestsellers=Book.objects.filter(is_bestselling=True) #só armazena a query e não o resultado!
 amazing_bestsellers=bestsellers.filter(rating__gt=4) #idem acima
 print(amazing_bestsellers) #só executa a query completa agora (melhor performance)
 print(bestsellers) #se rodar, não executa a query, mas pega o resultado em cache (mais rápido)
 print(Book.objects.filter(is_bestselling=True))#não armazena em cache
+```
 
 ## Slug automático em models.py (ex.: Harry Potter 1 -> harry-potter-1)
+```python
 from django.utils.text import slugify
 slug = models.SlugField(default='', blank=True, editable=False, null=False, db_index=True)
     self.slug = slugify(self.title)
     super().save(*args, **kwargs)
+```
 
-## administras dados - Pesquisar django admin site
+## administrar dados - Pesquisar django admin site
+```shell
 py manage.py createsuperuser
+```
+
 ## admin.py
 from .models import Book
 admin.site.register(Book)
