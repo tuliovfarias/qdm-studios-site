@@ -86,6 +86,7 @@ book= get_object_or404(Book, pk=id)
 ## models.py 
 ```python
 class Book(models.Model): #pesquisar django model field reference (FieldTypes)
+    title=models.CharField(max_length=30)
 ```
 
 ## MySQL django queries (pesquisar django making queries) 

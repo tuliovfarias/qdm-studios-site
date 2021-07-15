@@ -10,8 +10,9 @@
 
 {% block content %}
 <div id="blog_content">
-    <div>1-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, officia? Eius ullam porro amet? Vitae aliquid in quia mollitia suscipit est magnam, aliquam doloribus inventore expedita, vel nulla beatae architecto?</div>
-    <div>2-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse itaque voluptatem minus at dolores, error nihil mollitia impedit possimus assumenda, odio doloribus earum. Nesciunt illo, dignissimos officiis cumque veritatis dolor!</div>
-    <div>3-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum voluptates animi laboriosam, obcaecati necessitatibus neque maiores blanditiis incidunt dolor esse reiciendis quod aut labore voluptatibus, fuga fugiat nobis possimus rerum.</div>
+    <div>Vídeo</div>
+    <div>{{title|safe}}, {{datetime|safe}}
+        <p>{{text|safe}}</p>
+    </div>
 </div>
 {% endblock content %}
