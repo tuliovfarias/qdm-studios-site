@@ -2,7 +2,7 @@
   display: grid;
   height: 100vh;
   /* margin: 0 auto; */
-  grid-template-rows: 0.6fr auto;
+  grid-template-rows: 1fr auto;
   grid-gap: 1rem;
 }
 
