@@ -12,11 +12,16 @@
 <div id="blog_content">
     <div id='video'>Vídeo</div>
     <div id='all_posts'>
-        <a href=""><img src="blog/images/post1.jpg" alt="{{title|safe}},{{datetime|safe}}"><p>{{text|safe|slice:":65"}}</p></a>
-        <a href="">{{title|safe}}, {{datetime|safe}}<p>{{text|safe|slice:":65"}}</p></a>
-        <a href="">{{title|safe}}, {{datetime|safe}}<p>{{text|safe|slice:":65"}}</p></a>
-        <a href="">{{title|safe}}, {{datetime|safe}}<p>{{text|safe|slice:":85"}}</p></a>
 
+        <a href=""><img src="{% static 'blog/images/post1.jpg' %}" alt="{{title|safe}},{{datetime|safe}}">
+            <p>{{text|safe|truncatewords:10}}</p>
+        </a>
+        <a href=""><img src="{% static 'blog/images/post2.png' %}" alt="{{title|safe}},{{datetime|safe}}">
+            <p>{{text|safe|truncatewords:10}}</p>
+        </a>
+        <a href=""><img src="{% static 'blog/images/post3.JPG' %}" alt="{{title|safe}},{{datetime|safe}}">
+            <p>{{text|safe|truncatewords:10}}</p>
+        </a>
     </div>
 
 

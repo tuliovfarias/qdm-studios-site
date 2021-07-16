@@ -2,12 +2,13 @@
   display: grid;
   height: 100vh;
   /* margin: 0 auto; */
-  grid-template-rows: 0.6fr 1fr;
+  grid-template-rows: 0.6fr auto;
   grid-gap: 1rem;
 }
 
-#blog_content div{
-  background-color: rgb(222, 188, 255);
+#video{
+  /* color: white;
+  background-color: rgb(0, 0, 0); */
 }
 
 #all_posts{
@@ -21,9 +22,14 @@
   margin: 0.2rem 0.08rem;
   flex: 1 1 11rem;
   /*max-height: 11rem;
-  max-width: 11rem;*/
-  background-color: blueviolet;
+  max-width: 11rem; */
+  background-color: black;
   
+}
+
+#all_posts a img {
+  width: 100%;
+  height: auto;
 }
 
 
