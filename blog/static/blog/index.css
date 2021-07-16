@@ -2,10 +2,28 @@
   display: grid;
   height: 100vh;
   /* margin: 0 auto; */
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 0.6fr 1fr;
   grid-gap: 1rem;
 }
 
 #blog_content div{
-  background-color: blueviolet;
+  background-color: rgb(222, 188, 255);
 }
+
+#all_posts{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  
+}
+#all_posts a{
+  margin: 1rem;
+  flex: 1 1 10rem;
+  max-height: 10rem;
+  max-width: 10rem;
+  background-color: blueviolet;
+  
+}
+
+

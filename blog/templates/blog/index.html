@@ -10,9 +10,15 @@
 
 {% block content %}
 <div id="blog_content">
-    <div>Vídeo</div>
-    <div>{{title|safe}}, {{datetime|safe}}
-        <p>{{text|safe}}</p>
+    <div id='video'>Vídeo</div>
+    <div id='all_posts'>
+        <a href="">{{title|safe}}, {{datetime|safe}}<p>{{text|safe|slice:":65"}}</p></a>
+        <a href="">{{title|safe}}, {{datetime|safe}}<p>{{text|safe|slice:":65"}}</p></a>
+        <a href="">{{title|safe}}, {{datetime|safe}}<p>{{text|safe|slice:":65"}}</p></a>
+        <a href="">{{title|safe}}, {{datetime|safe}}<p>{{text|safe|slice:":85"}}</p></a>
+
     </div>
+
+
 </div>
 {% endblock content %}
