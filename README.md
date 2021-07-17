@@ -9,6 +9,10 @@ py manage.py startapp my_app
 py manage.py makemigrations #rodar toda vez que modifcar models.py
 py manage.py migrate #rodar toda vez que modifcar models.py
 py manage.py shell ## interagir com o banco
+# pra testar no celular, acrescentar no setup.py:
+ALLOWED_HOSTS = ['*']
+py manage.py runserver 0.0.0.0:8000
+# entrar no ip do pc pelo cel + :8000
 ```
 
 ## **settings.py**
@@ -117,10 +121,7 @@ py manage.py createsuperuser
 from .models import Book
 admin.site.register(Book)
 
-# pra testar no celular, acrescentar no setup.py:
-ALLOWED_HOSTS = ['*']
-py manage.py runserver 0.0.0.0:8000
-entrar no ip do pc pelo cel + :8000
+
     
 
 
