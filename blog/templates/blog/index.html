@@ -10,7 +10,7 @@
 
 {% block content %}
 <div id="blog_content">
-    <section id='slide'>
+    <section class="slide">
         <a href="" class="photo"><img src="{% static 'blog/images/post1.jpg' %}" alt=""></a>
         <a href="" class="photo"><img src="{% static 'blog/images/post2.png' %}" alt=""></a>
         <a href="" class="photo"><img src="{% static 'blog/images/post3.JPG' %}" alt=""></a>
@@ -29,21 +29,20 @@
 </div>
 
 <script>
-    var myIndex = 0;
-    carousel();
+    //var images = document.getElementsByClassName("photo");
+    var images = document.querySelectorAll(".photo");
+    var delay_image = 3000;
+    var counter = 0;
+    //images[counter].style.display = "block";
+    setInterval(next_image, delay_image);
 
-    function carousel() {
-        var i;
-        var x = document.getElementsByClassName("photo");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {
-            myIndex = 1
-        }
-        x[myIndex - 1].style.display = "block"
-        setTimeout(carousel, 9000);
+    function next_image() {
+        //for (counter = 0; counter < images.length; counter++;) {
+        //    images[counter].style.display = "none";
+        //}
+        images[counter].style.display = "none";
+        counter = (counter + 1) % images.length;
+        images[counter].style.display = "block";
     }
 </script>
 {% endblock content %}
