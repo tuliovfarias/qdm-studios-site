@@ -19,33 +19,7 @@
   width: 100%;
   object-fit: contain;
   /* position: absolute; */
-  opacity: 0;
-  animation-name: slides_animation;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
 }
-
-@keyframes slides_animation{
-  15%{
-    opacity:1;
-    transform:scale(1.1,.1,1);
-  }
-  85%{
-    opacity:0;
-  }
-}
-
-#photo:nth-child(1){
-  animation-delay: 1s;
-}
-#photo:nth-child(2){
-  animation-delay: 5s;
-}
-#photo:nth-child(3){
-  animation-delay: 10s;
-}
-
-
 
 #all_posts{
   display: flex;
@@ -67,5 +41,7 @@
   width: 100%;
   height: auto;
 }
+
+
 
 
