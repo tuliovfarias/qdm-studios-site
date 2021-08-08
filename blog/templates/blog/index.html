@@ -10,7 +10,7 @@
 
 {% block content %}
 <div id="blog_content">
-    <section class="slider">
+    <section id="slider">
         <div class="photo">
             <a href=""><img src="{% static 'blog/images/post1.jpg' %}" alt=""></a>
             <div class="img-title">Img 1</div>
@@ -38,7 +38,7 @@
     var images = document.querySelectorAll(".photo");
     var delay_image = 3000;
     var counter = 0;
-    //images[counter].style.display = "block";
+    images[counter].style.display = "block";
     setInterval(next_image, delay_image);
 
     function next_image() {
