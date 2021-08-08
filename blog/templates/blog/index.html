@@ -10,7 +10,7 @@
 
 {% block content %}
 <div id="blog_content">
-    <section id="slider">
+    <section id="slide">
         <div class="photo">
             <a href=""><img src="{% static 'blog/images/post1.jpg' %}" alt=""></a>
             <div class="img-title">Img 1</div>
@@ -38,7 +38,7 @@
     var images = document.querySelectorAll(".photo");
     var delay_image = 3000;
     var counter = 0;
-    images[counter].style.display = "block";
+    images[counter].style.display = "flex";
     setInterval(next_image, delay_image);
 
     function next_image() {
@@ -47,7 +47,7 @@
         //}
         images[counter].style.display = "none";
         counter = (counter + 1) % images.length;
-        images[counter].style.display = "block";
+        images[counter].style.display = "flex";
     }
 </script>
 {% endblock content %}
