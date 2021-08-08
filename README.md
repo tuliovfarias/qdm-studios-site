@@ -95,6 +95,8 @@ class Book(models.Model): #pesquisar django model field reference (FieldTypes)
 
 ## MySQL django queries (pesquisar django making queries) 
 ```python
+py manage.py shell
+
 from .models import Book #Queries na views
 Book.objects.filter(rating__gt=3) #pesquisar Field lookups
 bestsellers=Book.objects.filter(is_bestselling=True) #só armazena a query e não o resultado!

@@ -11,20 +11,25 @@
 {% block content %}
 <div id="blog_content">
     <section class="slider">
-        <a href="" class="photo"><img src="{% static 'blog/images/post1.jpg' %}" alt=""></a>
-        <a href="" class="photo"><img src="{% static 'blog/images/post2.png' %}" alt=""></a>
-        <a href="" class="photo"><img src="{% static 'blog/images/post3.JPG' %}" alt=""></a>
+        <div class="photo">
+            <a href=""><img src="{% static 'blog/images/post1.jpg' %}" alt=""></a>
+            <div class="img-title">Img 1</div>
+        </div>
+        <div class="photo">
+            <a href=""><img src="{% static 'blog/images/post2.png' %}" alt=""></a>
+            <div class="img-title">Img 2</div>
+        </div>
+        <div class="photo">
+            <a href=""><img src="{% static 'blog/images/post3.JPG' %}" alt=""></a>
+            <div class="img-title">Img 3</div>
+        </div>
     </section>
     <section id='all_posts'>
-        <a href=""><img src="{% static 'blog/images/post1.jpg' %}" alt="{{title|safe}},{{datetime|safe}}">
-            <p>{{text|safe|truncatewords:10}}</p>
+    {% for post in posts %}
+        <a href=""><img src="{% static 'blog/images/post1.jpg' %}" alt="{{posts.title|safe}},{{posts.datetime|safe}}">
+            <p>{{post.text|safe|truncatewords:10}}</p>
         </a>
-        <a href=""><img src="{% static 'blog/images/post2.png' %}" alt="{{title|safe}},{{datetime|safe}}">
-            <p>{{text|safe|truncatewords:10}}</p>
-        </a>
-        <a href=""><img src="{% static 'blog/images/post3.JPG' %}" alt="{{title|safe}},{{datetime|safe}}">
-            <p>{{text|safe|truncatewords:10}}</p>
-        </a>
+    {% endfor %}
     </section>
 </div>
 

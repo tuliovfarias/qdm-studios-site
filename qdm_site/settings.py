@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,6 +33,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'ckeditor',
+    'ckeditor_uploader',
     'blog',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -121,6 +123,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+#STATIC_ROOT = BASE_DIR/'static'
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
@@ -133,3 +139,24 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ALLOWED_HOSTS = ['*']
+
+SITE_ID = 1
+
+####################################
+##  CKEDITOR CONFIGURATION ##
+####################################
+# CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+
+# CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    },
+}
+
+###################################

@@ -16,10 +16,20 @@
 
 .photo img{
   display:block;
-  height: 100%;
+  justify-items: center;
+  /* height: 100%; */
   width: 100%;
   object-fit: cover;
   /* object-fit: contain; */
+}
+
+.img-title {
+  position: absolute;
+  text-align: center;
+  font-size: 5rem;
+  top: 5rem;
+  /* left: 0.5em; */
+  width: 100%;
 }
 
 #all_posts{
