@@ -26,8 +26,9 @@
     </section>
     <section id='all_posts'>
     {% for post in posts %}
-        <a href=""><img src="{% static 'blog/images/post1.jpg' %}" alt="{{posts.title|safe}},{{posts.datetime|safe}}">
-            <p>{{post.text|safe|truncatewords:10}}</p>
+        <a href="">
+        {% comment %} <img src="{% static 'blog/images/post1.jpg' %}" alt="{{posts.title|safe}},{{posts.datetime|safe}}"> {% endcomment %}
+            <div>{{post.text|safe|truncatewords_html:15}}</div>
         </a>
     {% endfor %}
     </section>

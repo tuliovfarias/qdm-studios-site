@@ -155,7 +155,58 @@ CKEDITOR_IMAGE_BACKEND = "pillow"
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': None,
+        'width': '100%',
+        'height': 600,
+        'contentsCss': 'img {max-width: 100%;height: auto! important;}',
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            [
+                'Bold',
+                'Italic',
+                'Underline'
+            ],
+            [
+                'Font',
+                'FontSize',
+                'TextColor',
+                'BGColor',
+                'Find',
+                'Replace',
+                '-',
+                'SpellChecker'
+            ],
+            [
+                'NumberedList',
+                'BulletedList',
+                '-',
+                'Outdent',
+                'Indent',
+                '-',
+                'JustifyLeft',
+                'JustifyCenter',
+                'JustifyRight',
+                'JustifyBlock',
+                'Table',
+                'TableTools'
+            ],
+            [
+                'Link',
+                'Unlink'
+            ],
+            [
+                'RemoveFormat',
+                'Source',
+                'Smiley',
+                'Image',
+
+                'Preview'
+            ],
+            {
+                'name': 'youtube',
+                'items': ['Youtube', ]
+            },
+        ],
+
     },
 }
 

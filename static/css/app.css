@@ -32,6 +32,7 @@ html {
   width: 100%;
   height: var(--nav_size);
   position: fixed;
+  z-index:10000; /* para deixar sobreposto aos outros elementos */
   top: 0;
   left: 0;
   background-color: black;
