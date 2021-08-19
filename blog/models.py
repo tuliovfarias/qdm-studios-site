@@ -20,4 +20,10 @@ class Post(models.Model):
     def __str__(self):
         return f"Title: {self.title}"
 
-    
+class Slide(models.Model):
+    title=models.CharField(max_length=30, default="")
+    photo=RichTextUploadingField()
+    slug=models.SlugField(default='', blank=True, null=False, db_index=True)
+
+    def __str__(self):
+        return f"Title: {self.title}"

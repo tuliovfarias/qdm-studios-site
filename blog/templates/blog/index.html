@@ -11,18 +11,13 @@
 {% block content %}
 <div id="blog_content">
     <section id="slide">
+    {% for slide in slides %}
         <div class="photo">
-            <a href=""><img src="{% static 'blog/images/post1.jpg' %}" alt=""></a>
-            <div class="img-title">Img 1</div>
-        </div>
-        <div class="photo">
-            <a href=""><img src="{% static 'blog/images/post2.png' %}" alt=""></a>
-            <div class="img-title">Img 2</div>
-        </div>
-        <div class="photo">
-            <a href=""><img src="{% static 'blog/images/post3.JPG' %}" alt=""></a>
-            <div class="img-title">Img 3</div>
-        </div>
+            <a href="">{{slide.photo|safe}}</a>
+            <div class="img-title">{{slide.title}}</div>
+        </div>  
+    {% endfor %}
+
     </section>
     <section id='all_posts'>
     {% for post in posts %}

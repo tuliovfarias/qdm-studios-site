@@ -1,6 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render
 from .models import Post
+from .models import Slide
 from operator import itemgetter, attrgetter
 
 # Create your views here.
@@ -8,20 +9,19 @@ from operator import itemgetter, attrgetter
 def page_index(request):
     try:
         # post = Post.objects.get(id=1)
-        posts = Post.objects.all()
-        sorted_posts = sorted(posts, key=attrgetter('datetime'))
-        latest_posts=sorted_posts[-6:]
+        sledes = Slide.objects.all()
+        latest_posts=get_latest_posts(6)
     except:
         raise Http404()
     return render(request, "blog/index.html", {
-        # 'title': post.title,
-        # 'datetime': post.datetime,
-        # 'text':post.text
-        # 'titles': posts.title,
-        # 'datetimes': posts.datetime,
-        # 'texts': posts.text
+        'slides': sledes,
         'posts': latest_posts
     })
+
+def get_latest_posts(number):
+        posts = Post.objects.all()
+        sorted_posts = sorted(posts, key=attrgetter('datetime'))
+        return(sorted_posts[-number:])
 
 
 def page_all_posts(request):
