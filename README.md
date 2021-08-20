@@ -27,7 +27,7 @@ py manage.py runserver 0.0.0.0:8000
 ```py
 from django.urls import path, include
 from . import views
-path('posts/<slug:slug>', views.post_detail)
+path('posts/<slug:var_slug>', views.post_detail)
 ```
 
 ## Enviar página html salva com argumentos (variáveis do código)
@@ -59,8 +59,9 @@ book= get_object_or404(Book, pk=id)
 # add css style
 <link rel="stylesheet" href="{% static 'app.css' %}">
 
-# redirecionar para url
-<a href="{% url "url_name" %}">All Challenges</a>
+# redirecionar para url 
+path('page1', views.page1, name='url_name'),
+<a href="{% url "url_name" book.slug %}">All Challenges</a>
 
 # carregar html passando variável
 {% include "./includes/header.html" with var1="var_1" %}

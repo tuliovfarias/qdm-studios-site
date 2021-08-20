@@ -28,9 +28,11 @@ def page_all_posts(request):
     pass
 
 
-def page_selected_post(request):
-    pass
-
+def page_selected_post(request, post_slug):
+    identified_post= Post.objects.get(slug=post_slug)
+    return render(request, "blog/post.html",{
+        "post": identified_post
+    })
 
 def page_contato(request):
     pass
