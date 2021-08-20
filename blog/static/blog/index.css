@@ -65,15 +65,18 @@
   background-color: black;
 }
 
+#all_posts a p {
+  /* text-align: justify; */
+  width: 100%;
+  padding: 0.3rem;
+}
+
 #all_posts a img {
   width: 100%;
   height: auto;
 }
 
-#all_posts a p {
-  /* text-align: justify; */
-  width: 100%;
-}
+
 
 @media only screen and (max-width:680px) {
   #blog_content {

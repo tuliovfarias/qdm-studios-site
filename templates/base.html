@@ -16,7 +16,7 @@
     <div id="header-area">
         <header class="margin-limit">
             <div id="title">
-                <a id="title" href="">QDM l STUDIOS</a>
+                <a id="title" href="{% url 'index' %}">QDM l STUDIOS</a>
             </div>
             {% comment %} <h1><a href=""><img id="image" src="{% static 'images/qdm_logo_hor.png' %}"
                         alt="QDM STUDIOS"></a></h1> {% endcomment %}
@@ -33,6 +33,12 @@
     <div id="contents" class="margin-limit">
         {% block content %}{% endblock content %}
     </div>
+    <footer id="footer-area">
+    <div id="footer-text">
+        <p>QDM | STUDIOS | 2021</p>
+        <p>(31) 9 9684-1144</p>
+    </div>
+    </footer>
 </body>
 
 </html>

@@ -38,6 +38,22 @@ html {
   background-color: black;
 }
 
+#footer-area {
+  width: 100%;
+  height: var(--nav_size);
+  position: fixed;
+  z-index:9999; /* para deixar sobreposto aos outros elementos */
+  bottom: 0;
+  left: 0;
+  background-color: black;
+}
+
+#footer-text{
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
 header {
   height: var(--nav_size);
   display: flex;
@@ -86,7 +102,10 @@ a{
 
 #contents {
   margin-top: var(--nav_size); /* Avoid content overlay */
+  margin-bottom: var(--nav_size);
 }
+
+
 
 /* #socials-links-area {
   grid-area: socials-links-area;
