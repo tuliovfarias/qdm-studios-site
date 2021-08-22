@@ -48,11 +48,22 @@ html {
   background-color: black;
 }
 
-#footer-text{
+#footer{
+  display: flex;
+  justify-content: space-around;
+  max-width: var(--max_body_width);
+  padding-inline: 3%;
+  margin-inline: auto;
   color: white;
   text-align: center;
   padding: 10px;
 }
+
+#footer a img{
+  width: 35px;
+  height: 35px;
+}
+
 
 header {
   height: var(--nav_size);

@@ -5,7 +5,8 @@
 
 #blog_content {
   display: grid;
-  height: calc(100vh - var(--nav_size));
+  /* height: calc(100vh - var(--nav_size)); */
+  height: 100%;
   /* margin: 0 auto; */
   /* grid-template-rows: minmax(0, 1fr) auto; */
   grid-template-columns: 0.75fr auto;
@@ -29,10 +30,10 @@
 }
 
 #side{
+  min-width: 20px;
   grid-area: side;
   background-color: #ffa08c;
 }
-
 
 #post p{
   width: 100%;
