@@ -76,8 +76,6 @@
   height: auto;
 }
 
-
-
 @media only screen and (max-width:680px) {
   #blog_content {
     grid-template-rows: var(--pic_height_SP) auto;
@@ -86,7 +84,7 @@
     min-height: var(--pic_height_SP);
   }
   .img-title {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }  
 }
 

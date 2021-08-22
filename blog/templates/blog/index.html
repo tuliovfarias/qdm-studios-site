@@ -22,7 +22,7 @@
     <section id='all_posts'>
     {% for post in posts %}
         <a href="{% url 'selected_post' post.slug %}">
-            <div>{{post.text|safe|truncatewords_html:15}}</div>
+            <div>{{post.text|safe|truncatewords_html:10}}</div>
         </a>
     {% endfor %}
     </section>

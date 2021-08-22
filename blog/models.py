@@ -9,7 +9,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
 
 class Post(models.Model):
-    title=models.CharField(max_length=30, default="")
+    title=models.CharField(max_length=100, default="")
     author= models.CharField(max_length=50, default="Túlio Farias")
     #text=models.TextField(max_length=3000, default="")
     #text=RichTextField()
@@ -21,7 +21,7 @@ class Post(models.Model):
         return f"Title: {self.title}"
 
 class Slide(models.Model):
-    title=models.CharField(max_length=30, default="")
+    title=models.CharField(max_length=200, default="")
     photo=RichTextUploadingField()
     slug=models.SlugField(default='', blank=True, null=False, db_index=True)
 
