@@ -53,6 +53,8 @@
   position: relative;
   flex-wrap: wrap;
   justify-content: center;
+  /* align-items: flex-start;
+  align-content: flex-start; */
   overflow: hidden;
   /* align-items: center; */
 }
@@ -63,6 +65,11 @@
   /*max-height: 11rem;
   max-width: 11rem; */
   background-color: black;
+}
+
+#all_posts a:hover{
+  transform: scale(1.01);
+  background-color: #00276e;
 }
 
 #all_posts a p {

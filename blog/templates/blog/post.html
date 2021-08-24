@@ -14,7 +14,10 @@
         <div>{{post.text|safe}}</div>
     </section>
     <section id='side'>
-        <div>side</div>
+        {% for other_post in other_posts %}
+        <div><a href="{% url 'selected_post' other_post.slug %}">
+            {{other_post.text|safe|truncatewords_html:5}}</a></div>
+        {% endfor %}
     </section>
 </div>
 

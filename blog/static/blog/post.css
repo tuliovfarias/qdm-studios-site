@@ -9,36 +9,57 @@
   height: 100%;
   /* margin: 0 auto; */
   /* grid-template-rows: minmax(0, 1fr) auto; */
-  grid-template-columns: 0.75fr auto;
+  grid-template-columns: 0.75fr 0.25fr;
   grid-template-areas: "post side";
   gap: 0.08rem;
 }
 
-.photo{
-  display: none;
-}
-
-
 #post{
-  /*position: relative;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow: hidden; */
+  margin-top: 5px;
+  /* position: relative; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  /* overflow: hidden; */
   grid-area: post;
-  background-color: #8ca0ff;
+  /* background-color: #8ca0ff; */
   /* align-items: center; */
 }
 
 #side{
-  min-width: 20px;
+  /* display: flex; */
+  /* max-width: 200px; */
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  min-width: 2rem;
   grid-area: side;
-  background-color: #ffa08c;
+  overflow: hidden;
+  
+}
+#side div{
+  background-color: black;
+  padding: 0.3rem;
+}
+
+#side img{
+  max-width: 100%;
+}
+
+#side a{
+  color: white;
 }
 
 #post p{
   width: 100%;
-  /* text-align: justify; */
-  font-size: 30px;
+  text-align: justify;
+  text-align-last:left;
+  font-size: 20px;
   color: black;
 }
 
@@ -51,7 +72,8 @@
 }
 
 #post img {
-  width: 100%;
+  /* margin-left: 15%; */
+  width: 100%; 
   /* height: auto; */
 }
 
