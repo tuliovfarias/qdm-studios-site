@@ -21,8 +21,6 @@ def page_index(request):
     })
 
 def get_latest_posts(number, exclude_slug=None):
-        # posts = Post.objects.order_by('-hit_count_generic__hits')
-        # return (posts[-number:])
         posts = Post.objects.exclude(slug=exclude_slug) #query all elements excluding that with the provided slug
         sorted_posts = sorted(posts, key=attrgetter('datetime'))
         return(sorted_posts[-number:])
@@ -39,8 +37,7 @@ def page_all_posts(request):
 #     })
 
 def page_contato(request):
-    pass
-
+    return render(request, "blog/contato.html")
 
 def page_sobre(request):
     pass
@@ -53,9 +50,9 @@ class PostDetailView(HitCountDetailView):
     count_hit = True
 
     def get_context_data(self, **kwargs):
-        context = super(HitCountDetailView, self).get_context_data(**kwargs)
+        context = super(PostDetailView, self).get_context_data(**kwargs)
         post_slug = self.kwargs['slug']
-        popular_posts=Post.objects.exclude(slug=post_slug).exclude(slug=post_slug).order_by('-hit_count_generic__hits')[:3]
+        popular_posts=Post.objects.exclude(slug=post_slug).exclude(slug=post_slug).order_by('-hit_count_generic__hits')[:6]
         context.update({
         'popular_posts':popular_posts,
         })
