@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load hitcount_tags %}
 
 
 {% block title %}QDM | STUDIOS{% endblock title %}
@@ -12,11 +13,12 @@
 <div id="blog_content">
     <section id='post'>
         <div>{{post.text|safe}}</div>
+        <p>Views: {% get_hit_count for post %}</p>   
     </section>
     <section id='side'>
-        {% for other_post in other_posts %}
-        <div><a href="{% url 'selected_post' other_post.slug %}">
-            {{other_post.text|safe|truncatewords_html:5}}</a></div>
+        {% for popular_post in popular_posts %}
+        <div><a href="{% url 'selected_post' popular_post.slug %}">
+            {{popular_post.text|safe|truncatewords_html:5}}</a></div>
         {% endfor %}
     </section>
 </div>

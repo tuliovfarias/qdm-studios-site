@@ -5,6 +5,8 @@ from django.utils.text import slugify
 from django.utils.timezone import datetime
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
+from django.contrib.contenttypes.fields import GenericRelation
+from hitcount.models import HitCountMixin, HitCount
 
 # Create your models here.
 
@@ -17,6 +19,14 @@ class Post(models.Model):
     datetime=models.DateTimeField(default=datetime.now)
     slug=models.SlugField(default='', blank=True, null=False, db_index=True)
 
+    hit_count_generic = GenericRelation(
+        HitCount, object_id_field='object_pk',
+        related_query_name='hit_count_generic_relation'
+    )
+    
+    # def current_hit_count(self):
+    #     return self.hit_count.hits
+
     def __str__(self):
         return f"Title: {self.title}"
 
@@ -27,3 +37,4 @@ class Slide(models.Model):
 
     def __str__(self):
         return f"Title: {self.title}"
+
