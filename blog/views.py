@@ -52,7 +52,7 @@ class PostDetailView(HitCountDetailView):
     def get_context_data(self, **kwargs):
         context = super(PostDetailView, self).get_context_data(**kwargs)
         post_slug = self.kwargs['slug']
-        popular_posts=Post.objects.exclude(slug=post_slug).exclude(slug=post_slug).order_by('-hit_count_generic__hits')[:6]
+        popular_posts=Post.objects.exclude(slug=post_slug).order_by('-hit_count_generic__hits')[:6]
         context.update({
         'popular_posts':popular_posts,
         })

@@ -28,7 +28,7 @@ class Post(models.Model):
     #     return self.hit_count.hits
 
     def __str__(self):
-        return f"Title: {self.title}"
+        return f"{self.title}"
 
 class Slide(models.Model):
     title=models.CharField(max_length=200, default="")
